@@ -1,5 +1,5 @@
 Name:       ff-disable-ai-ml
-Version:    0.1
+Version:    0.3
 Release:    %autorelease
 Summary:    Disable all AI and ML preferences in Firefox
 License:    MIT
