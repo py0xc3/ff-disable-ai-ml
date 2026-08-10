@@ -9,9 +9,9 @@ Source0:    https://github.com/py0xc3/ff-disable-ai-ml/archive/refs/tags/v%{vers
 Requires: firefox
 
 BuildRequires: systemd-rpm-macros
-BuildRequires: make
 
 %global mozappdir     %{_libdir}/firefox
+%global debug_package %{nil}
 
 %description
 By default, Firefox enables certain AI and ML preferences.
@@ -33,12 +33,14 @@ order to keep AI/ML disabled for users who want it that way.
 #not applicable
 
 %install
-%make_install
+mkdir -p %{buildroot}%{mozappdir}/defaults/pref
+install -p -m 0644 -D -T autoconfig.js %{buildroot}%{mozappdir}/defaults/pref/autoconfig.js
+install -p -m 0644 -D -T ff_disable_ai_ml.cfg %{buildroot}%{mozappdir}/ff_disable_ai_ml.cfg
 
 %files
 %license LICENSE
-%{buildroot}%{mozappdir}/defaults/pref/autoconfig.js
-%{buildroot}%{mozappdir}/ff_disable_ai_ml.cfg
+%{mozappdir}/defaults/pref/autoconfig.js
+%{mozappdir}/ff_disable_ai_ml.cfg
 
 %changelog
 %autochangelog
