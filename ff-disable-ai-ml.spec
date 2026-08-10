@@ -9,6 +9,7 @@ Source0:    https://github.com/py0xc3/ff-disable-ai-ml/archive/refs/tags/v%{vers
 Requires: firefox
 
 BuildRequires: systemd-rpm-macros
+BuildRequires: make
 
 %global mozappdir     %{_libdir}/firefox
 
