@@ -24,3 +24,17 @@ AI/ML enabled. This package will disable AI/ML preferences
 automatically and if Firefox changes its AI/ML preferences
 over time, the package can auto-update the preferences in
 order to keep AI/ML disabled for users who want it that way.
+
+**Note:**
+
+This package might be obsoleted when the "Block AI" option
+is updated to disable AI rather than only hiding it, which
+can be patched in Fedora's build or upstream. Disabling AI
+by default is not allowed due to the terms of Mozilla.
+
+Changes about this will be aligned with downstream
+(CentOS Stream, Alma, Rocky).
+
+If the package is removed, it is aimed to set the "Block AI"
+to disabled on the package's removal in order to retain
+the known user preference.
