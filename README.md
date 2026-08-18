@@ -11,12 +11,12 @@ By default, Firefox enables certain AI and ML preferences. The "Block AI" option
 
 **Note:**
 
-This package might be obsoleted when the "Block AI" option is updated to disable AI rather than only hiding it, which can be patched in Fedora's build or upstream. Disabling AI by default is not allowed due to the terms of Mozilla.
+When the "Block AI" option is updated to disable AI features (patched in Fedora's build or upstream), this package is intended to be obsoleted but it is aimed to set the "Block AI" option to disabled during the package's removal (if the removal takes place through obsoleting during an update) in order to retain the known user preference that the user expects. 
 
 Changes about this will be aligned with downstream (CentOS Stream, Alma, Rocky).
-
-If the package is removed, it is aimed to set the "Block AI" to disabled on the package's removal in order to retain the known user preference.
 
 # Implementation
 
 This package uses Mozilla's [AutoConfig](https://support.mozilla.org/en-US/kb/customizing-firefox-using-autoconfig) to implement the disabling. Using `policies.json` is intentionally avoided to not accidentally delete/override user, admin or enterprise/organization policies and customizations: `policies.json` is not intended to be be owned by a separate package.
+
+Disabling the AI features in Firefox by default will not be possible and this package is intended to be installed manually by the user/admin.
