@@ -18,7 +18,7 @@ Changes about this will be aligned with downstream (CentOS Stream, Alma, Rocky).
 
 # Community-effort to keep the preferences of this package up to date against Firefox versions
 
-This package is intended to be a community effort, in which every Firefox user who knows of `about:config` can contribute: if any one user finds changed or new AI/ML settings that enable any AI/ML despite the installed package, they can report it against the source repo so that all users can get an update that keeps AI/ML disabled through the package.
+This package is intended to be a community effort, in which every Firefox user who knows of `about:config` can contribute: if any one user finds changed or new AI/ML settings that enable any AI/ML despite the installed package, they can report it against the [source repo](https://github.com/py0xc3/ff-disable-ai-ml/issues) so that all users can get an update that keeps AI/ML disabled through the package. 
 
 # Implementation
 
