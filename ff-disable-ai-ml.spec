@@ -14,17 +14,22 @@ BuildRequires: systemd-rpm-macros
 %global debug_package %{nil}
 
 %description
-By default, Firefox enables certain AI and ML preferences.
+By default, Firefox enables certain AI/ML preferences.
 The "Block AI" option in the settings does not disable them
-but only hide them. This means, users must disable these
+but only hides them. This means, users must disable these
 preferences manually in about:config and thus know what they
-are doing. At the same time, there are many AI/ML settings,
-which over time could change: this forces users to monitor
-and maintain their settings themselves if they do not want
-AI/ML enabled. This package will disable AI/ML preferences
-automatically and if Firefox changes its AI/ML preferences
-over time, the package can auto-update the preferences in
-order to keep AI/ML disabled for users who want it that way.
+are doing: there are many AI/ML preferences that could
+change over time, while existing documentation does not
+determine any preference that disables all AI/ML reliably
+throughout future versions: this forces users to monitor
+their settings themselves if they do not want AI/ML enabled.
+This package will disable AI/ML preferences automatically
+and if Firefox changes its AI/ML preferences in future, the
+package can auto-update the preferences to keep AI/ML
+disabled for users who want it that way: if any one user
+finds changed or new AI/ML settings, they can report it
+against the source repo so that all users can get an update
+that keeps AI/ML disabled.
 
 %prep
 %autosetup -n %{name}-%{version}
