@@ -1,6 +1,10 @@
 # ff-disable-ai-ml
 Disable AI/ML features in FF, and keep "disabled feature" list updated against current FF versions
 
+# THIS REPO WAS MIGRATED TO A NEW LOCATION: USE THE NEW REPO AS SOURCE, NOT THIS ONE!
+
+**This repo was migrated to [firefox-disable-ai-ml](https://github.com/py0xc3/firefox-disable-ai-ml): do no longer use the "ff-disable-ai-ml" repo but only the new "firefox-disable-ai-ml".**
+
 # Environment
 This is intended to be packaged as `rpm` for Fedora or its interwoven downstream distributions (CentOS Stream, AlmaLinux, RockyLinux through EPEL) and used in conjunction with these distributions' default Firefox build. It is assumed this package is kept updated through an update repository that is aligned with the distribution's default Firefox build (default repo or epel). Support also includes the Firefox of Silverblue/Kinoite base images, but not yet any Firefox flatpak.
 
